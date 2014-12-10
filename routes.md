@@ -60,7 +60,7 @@ You can set route parameters in your URI by defining as `:param`. These paramete
 <a name="routing-to-controllers"></a>
 ## Routing To Controllers
 
-Herbert allows you to not only route to Closures, but also to controller classes, visit the documentation on [Controllers](/controllers) for more details.
+Herbert allows you to not only route to Closures, but also to controller classes, visit the documentation on [Controllers](/$branch/controllers) for more details.
 
 	$plugin->route->get([
 		'as'   => 'userProfile',
