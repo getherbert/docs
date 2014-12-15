@@ -15,8 +15,8 @@ Panels (or menus) for your plugin will be defined in the `plugin/panels.php` fil
 	$plugin->panel->add([
 		'type'   => 'panel',
 		'as'     => 'mainPanel',
-		'title'  => 'My Plugin'
-		'slug'   => 'myplugin-index',
+		'title'  => 'My Plugin',
+		'slug'   => 'myplugin-index'
 	], function() use ($plugin) {
 		return 'Hello World';
 	});
@@ -28,8 +28,8 @@ Panels (or menus) for your plugin will be defined in the `plugin/panels.php` fil
 	$plugin->panel->add([
 		'type'   => 'panel',
 		'as'     => 'mainPanel',
-		'title'  => 'My Plugin'
-		'slug'   => 'myplugin-index',
+		'title'  => 'My Plugin',
+		'slug'   => 'myplugin-index'
 	], 'AdminController@index');
 
 
@@ -48,7 +48,7 @@ Below is an example using `dashicons`
 	$plugin->panel->add([
 		'type'   => 'panel',
 		'as'     => 'mainPanel',
-		'title'  => 'My Plugin'
+		'title'  => 'My Plugin',
 		'slug'   => 'myplugin-index',
 		'icon'   => 'dashicons-media-audio'
 	], 'AdminController@index');
@@ -68,10 +68,10 @@ To add a subpanel, you set its Type to `subpanel` and supply a Parent Name.
 
 	$plugin->panel->add([
 		'type'   => 'subpanel',
-		'parent' => 'mainPanel'
+		'parent' => 'mainPanel',
 		'as'     => 'configure',
-		'title'  => 'Configure'
-		'slug'   => 'myplugin-configure',
+		'title'  => 'Configure',
+		'slug'   => 'myplugin-configure'
 	], 'AdminController@configure');
 
 #### Renaming the Root Subpanel
@@ -107,10 +107,10 @@ To add a wordpress subpanel, you set its Type to `wp-subpanel` and supply a Pare
 
 	$plugin->panel->add([
 		'type'   => 'wp-subpanel',
-		'parent' => 'index.php'
+		'parent' => 'index.php',
 		'as'     => 'dashboardSubpanel',
 		'title'  => 'Your Subpanel'
-		'slug'   => 'myplugin-dashboard',
+		'slug'   => 'myplugin-dashboard'
 		], 'AdminController@dashboard');
 
 There is 12 different types of wordpress panels which you can supply as a Parent Name:
