@@ -6,7 +6,7 @@ All controllers should extend the `BaseController` class. Here is an example of 
 
 
 
-	class UserController extends Herbert\Framework\BaseController {
+	class UserController extends BaseController {
 
 		/**
 		* Show the profile for the given user.
