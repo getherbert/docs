@@ -5,7 +5,7 @@ Widget are typically stored in the `plugin/widgets` directory. Once ready to reg
 When defining a widget it must extend the `BaseWidget` class. Here is an example of a basic widget class:
 
 
-	class MyWidget extends Herbert\Framework\BaseWidget {
+	class MyWidget extends BaseWidget {
 
 		public function __construct() {
 
