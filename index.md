@@ -20,3 +20,19 @@ Developing a plugin using Herbert should happen outside of your Wordpress instal
  To achieve this we use a Symbolic Link.
 
 	ln -s /path/to/projects/plugin-name /path/to/sites/wordpress/wp-content/plugins/plugin-name
+
+## Naming your Plugin
+
+Open the 'plugin.php' and you will see a comment at the top where you set several settings. As standard it looks like so:
+
+
+	/**
+	* @wordpress-plugin
+	* Plugin Name:       Plugin Name
+	* Plugin URI:        http://plugin-name.com/
+	* Description:       A plugin.
+	* Version:           1.0.0
+	* Author:            Author
+	* Author URI:        http://author.com/
+	* License:           MIT
+	*/
