@@ -23,7 +23,7 @@ Developing a plugin using Herbert should happen outside of your Wordpress instal
 
 ## Naming your Plugin
 
-Open the 'plugin.php' and you will see a comment at the top where you set several settings. As standard it looks like so:
+Open the `plugin.php` and you will see a comment at the top where you set several settings. As standard it looks like so:
 
 
 	/**
