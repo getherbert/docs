@@ -18,7 +18,7 @@ To set a name for your api to be accessed from, open `config.php` and set the va
 You can define a new method in the `Api` class within `plugin/api.php` like so:
 
 
-	class Api extends Herbert\Framework\BaseController {
+	class Api extends BaseController {
 
 		/**
 		* Show username for the given user.
@@ -40,7 +40,7 @@ Then the developer could access this function as follows:
 
 Your api method may just be a wrapper for a controller method like so:
 
-	class Api extends Herbert\Framework\BaseController {
+	class Api extends BaseController {
 
 		/**
 		* Show username for the given user.
