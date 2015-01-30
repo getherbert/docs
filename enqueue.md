@@ -10,7 +10,7 @@
 <a name="basic"></a>
 ## Basic
 
-Enqueue is the process of how wordpress loads Scripts and Styles for your plugin. It could be a piece of javascript that is required on an certain admin page or on every post. Enqueue you must supply a Source and Name. The Source is relative to your `plugin/assets` folder.
+Enqueue is the process of how WordPress loads Scripts and Styles for your plugin. It could be a piece of javascript that is required on an certain admin page or on every post. Enqueue you must supply a Source and Name. The Source is relative to your `plugin/assets` folder.
 
 > **Note:**  Enqueue doesn't work on Routes. You must supply them using standard `link` and `script` tags.
 
@@ -86,7 +86,7 @@ Its unlikely that you would want to load a source on every panel therefore you c
 <a name="filter-hook"></a>
 ## Filter by Hook
 
-Filtering by Wordpress standard panels is referred to as Hooks
+Filtering by WordPress standard panels is referred to as Hooks
 
 
 #### Enqueue on one specific hook

@@ -2,12 +2,12 @@
 
 - [Main Panels](#main-panels)
 - [Subpanels](#subpanels)
-- [Wordpress Subpanels](#wp-subpanels)
+- [WordPress Subpanels](#wp-subpanels)
 
 <a name="main-panels"></a>
 ## Main Panels
 
-Panels (or menus) for your plugin will be defined in the `plugin/panels.php` file. Herbert panels refer to an option in left sidebar of Wordpress admin area. They consist of a Type, Name, Title, Slug and a Closure callback. The Slug will be appended to the site admin url, for example: `http://example.com/wp-admin/admin.php?page=myplugin-index`
+Panels (or menus) for your plugin will be defined in the `plugin/panels.php` file. Herbert panels refer to an option in left sidebar of WordPress admin area. They consist of a Type, Name, Title, Slug and a Closure callback. The Slug will be appended to the site admin url, for example: `http://example.com/wp-admin/admin.php?page=myplugin-index`
 
 
 #### Main Panel using Closure
@@ -76,7 +76,7 @@ To add a subpanel, you set its Type to `subpanel` and supply a Parent Name.
 
 #### Renaming the Root Subpanel
 
-You will notice if you add the first subpanel that Wordpress will automatically insert a subpanel named the same as parent:
+You will notice if you add the first subpanel that WordPress will automatically insert a subpanel named the same as parent:
 
 ```
 My Plugin
@@ -92,9 +92,9 @@ To rename this just supply the Name of the parent and the new Title
 	]);
 
 <a name="wp-subpanels"></a>
-## Wordpress Subpanels
+## WordPress Subpanels
 
-If you require a subpanel under one of the standard Wordpress panels, for example:
+If you require a subpanel under one of the standard WordPress panels, for example:
 
 ```
 Dashboard
@@ -103,7 +103,7 @@ Dashboard
 ├── Your Subpanel
 ```
 
-To add a wordpress subpanel, you set its Type to `wp-subpanel` and supply a Parent Name.
+To add a WordPress subpanel, you set its Type to `wp-subpanel` and supply a Parent Name.
 
 	$plugin->panel->add([
 		'type'   => 'wp-subpanel',
@@ -113,7 +113,7 @@ To add a wordpress subpanel, you set its Type to `wp-subpanel` and supply a Pare
 		'slug'   => 'myplugin-dashboard'
 		], 'AdminController@dashboard');
 
-There is 12 different types of wordpress panels which you can supply as a Parent Name:
+There is 12 different types of WordPress panels which you can supply as a Parent Name:
 
 ```
 Dashboard: 'index.php'
