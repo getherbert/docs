@@ -1,7 +1,7 @@
 # API
 
 
-API is a class that is exposed to the developer using your plugin. Its extends the `BaseController` like any other controller in your plugin. The developer may call your api in a page template like so:
+API is a class that is exposed to the developer using your plugin. It extends the `BaseController` like any other controller in your plugin. The developer may call your api in a page template like so:
 
 	$myPluginApi->method();
 
