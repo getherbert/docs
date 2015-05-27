@@ -30,7 +30,7 @@ Open the `plugin.php` and you will see a comment at the top where you set severa
 
 	/**
 	* @wordpress-plugin
-	* Plugin Name:       Plugin Name
+	* Plugin Name:       My Plugin
 	* Plugin URI:        http://plugin-name.com/
 	* Description:       A plugin.
 	* Version:           1.0.0
@@ -38,3 +38,48 @@ Open the `plugin.php` and you will see a comment at the top where you set severa
 	* Author URI:        http://author.com/
 	* License:           MIT
 	*/
+
+## Namespacing your Plugin
+
+To avoid conflicts with other plugins or the WordPress core its important to set a [namespace](http://php.net/manual/en/language.namespaces.php). To get started lets open up `composer.json` and find the `autoload` section. As standard it looks like:
+
+``` javascript
+"autoload": {
+    "psr-4": {
+      "MyPlugin\\": "app/"
+    }
+  }
+```
+Now let's update `MyPlugin` with your namespace. Generally your plugin name without spaces, for example: Our plugin called `Social Icons (pro)` would become `SocialIconsPro`. Now the autoload section would look like:
+
+``` javascript
+"autoload": {
+    "psr-4": {
+      "SocialIconsPro\\": "app/"
+    }
+  }
+```
+We need to tell composer that we've made this change so in your plugin root run `composer dump-autoload`. Now at the top of each of the following files:
+
+```
+app/
+	Helper.php
+	api.php
+	enqueue.php
+	panels.php
+	routes.php
+	shortcodes.php
+	widgets.php
+```
+
+
+We'll update their namespace from `MyPlugin` to `SocialIconsPro` by changing this line:
+
+``` php
+<?php namespace MyPlugin;
+```
+To
+
+``` php
+<?php namespace SocialIconsPro;
+```
