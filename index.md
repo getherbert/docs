@@ -63,13 +63,13 @@ We need to tell composer that we've made this change so in your plugin root run 
 
 ```
 app/
-	Helper.php
-	api.php
-	enqueue.php
-	panels.php
-	routes.php
-	shortcodes.php
-	widgets.php
+├──	Helper.php
+├──	api.php
+├──	enqueue.php
+├──	panels.php
+├──	routes.php
+├──	shortcodes.php
+├──	widgets.php
 ```
 
 

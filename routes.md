@@ -7,7 +7,7 @@
 <a name="basic-routing"></a>
 ## Basic Routing
 
-Routes for your plugin will be defined in the `plugin/routes.php` file. Herbert routes consist of a Name, URI and a Closure callback. The URI will be appended to the site url, for example: `http://example.com/simple`
+Routes for your plugin will be defined in the `app/routes.php` file. Herbert routes consist of a Name, URI and a Closure callback. The URI will be appended to the site url, for example: `http://example.com/simple`
 
 #### Basic GET Route
 
