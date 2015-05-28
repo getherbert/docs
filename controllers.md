@@ -8,7 +8,6 @@ Don't forgot to namespace your controllers. Here is an example of a basic contro
 
 
 ```php
-
 <?php namespace MyPlugin\Controllers;
 
 use Herbert\Framework\Models\Post;
