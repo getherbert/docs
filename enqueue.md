@@ -64,7 +64,7 @@ Its unlikely that you would want to load a source on every panel therefore you c
 
 	$enqueue->admin([
 		'as'     => 'someJS',
-		'src'    => '/js/some.js',
+		'src'    => Helper::assetUrl('/js/some.js'),
 		'filter' => [ 'panel' => '*' ]
 	]);
 
@@ -72,7 +72,7 @@ Its unlikely that you would want to load a source on every panel therefore you c
 
 	$enqueue->admin([
 		'as'     => 'someJS',
-		'src'    => '/js/some.js',
+		'src'    => Helper::assetUrl('/js/some.js'),
 		'filter' => [ 'panel' => 'mainPanel' ]
 	]);
 
@@ -80,7 +80,7 @@ Its unlikely that you would want to load a source on every panel therefore you c
 
 	$enqueue->admin([
 		'as'     => 'someJS',
-		'src'    => '/js/some.js',
+		'src'    => Helper::assetUrl('/js/some.js'),
 		'filter' => [ 'panel' => ['mainPanel', 'subPanel'] ]
 	]);
 
@@ -95,7 +95,7 @@ Filtering by WordPress standard panels is referred to as Hooks
 
 	$enqueue->admin([
 		'as'     => 'someJS',
-		'src'    => '/js/login.js',
+		'src'    => Helper::assetUrl('/js/login.js'),
 		'filter' => [ 'hook' => 'edit.php' ]
 	]);
 
@@ -103,7 +103,7 @@ Filtering by WordPress standard panels is referred to as Hooks
 
 	$enqueue->admin([
 		'as'     => 'someJS',
-		'src'    => '/js/some.js',
+		'src'    => Helper::assetUrl('/js/some.js'),
 		'filter' => [ 'hook' => ['post-new.php', 'edit.php'] ]
 	]);
 
@@ -118,7 +118,7 @@ Filtering by Post, Pages and Categories work the same, they accept IDs, Name or 
 
 	$enqueue->front([
 		'as'     => 'someJS',
-		'src'    => '/js/some.js',
+		'src'    => Helper::assetUrl('/js/some.js'),
 		'filter' => [ 'page' => '*' ]
 	]);
 
@@ -126,7 +126,7 @@ Filtering by Post, Pages and Categories work the same, they accept IDs, Name or 
 
 	$enqueue->front([
 		'as'     => 'someJS',
-		'src'    => '/js/some.js',
+		'src'    => Helper::assetUrl('/js/some.js'),
 		'filter' => [ 'post' => '23' ]
 	]);
 
@@ -134,7 +134,7 @@ Filtering by Post, Pages and Categories work the same, they accept IDs, Name or 
 
 	$enqueue->front([
 		'as'     => 'someJS',
-		'src'    => '/js/some.js',
+		'src'    => Helper::assetUrl('/js/some.js'),
 		'filter' => [ 'category' => ['12', '14'] ]
 	]);
 
@@ -147,7 +147,7 @@ Filtering by Archive or Search only take the `*` input.
 
 	$enqueue->front([
 		'as'     => 'someJS',
-		'src'    => '/js/some.js',
+		'src'    => Helper::assetUrl('/js/some.js'),
 		'filter' => [ 'search' => '*' ]
 	]);
 
@@ -155,7 +155,7 @@ Filtering by Archive or Search only take the `*` input.
 
 	$enqueue->front([
 		'as'     => 'someJS',
-		'src'    => '/js/some.js',
+		'src'    => Helper::assetUrl('/js/some.js'),
 		'filter' => [ 'archive' => '*' ]
 	]);
 
@@ -168,7 +168,7 @@ Filtering by Post Type only accepts Slugs
 
 	$enqueue->front([
 		'as'     => 'someJS',
-		'src'    => '/js/some.js',
+		'src'    => Helper::assetUrl('/js/some.js'),
 		'filter' => [ 'postType' => 'movies' ]
 	]);
 
@@ -176,6 +176,6 @@ Filtering by Post Type only accepts Slugs
 
 	$enqueue->front([
 		'as'     => 'someJS',
-		'src'    => '/js/some.js',
+		'src'    => Helper::assetUrl('/js/some.js'),
 		'filter' => [ 'postType' => ['movies', 'games'] ]
 	]);
