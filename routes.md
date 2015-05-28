@@ -35,13 +35,12 @@ $router->post([
 ]);
 ```
 
-#### Support for PUT & DELETE
-
-Most browsers don't support `PUT` & `DELETE` yet so its recommended you avoid using these methods.
+#### Support for PUT, DELETE and PATCH
 
 ```
 $router->put();
 $router->delete();
+$router->patch();
 ```
 
 #### Accessing framework components within a closure
