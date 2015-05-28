@@ -1,6 +1,6 @@
 # Getting Started
 
-> **Note:**  These docs are going through a rewrite and should be up to date by end of 31th May.
+> **Note:**  These docs are going through a rewrite and should be up to date by end of 31st May.
 
 Welcome, Herbert is a plugin framework for WordPress. We believe the current approach to building plugins is unorganised and difficult to understand. It makes working in teams or taking over from a previous developer time consuming. Its early days for Herbert but our aim is to solve this.
 
