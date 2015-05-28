@@ -1,43 +1,33 @@
 # Inputs
 
-- [Basic Inputs](#basic-inputs)
-- [PUT & DELETE Inputs](#put-inputs)
-
-<a name="basic-inputs"></a>
-## Basic Inputs
 
 You may access all user input with a few simple methods. You do not need to worry about the HTTP verb when dealing with `GET` and `POST`.
 
-> **Note:**  When inside a controller the `$plugin` class is accessed by `$this`.
+> **Note:**  Remember to include `Herbert\Framework\Http $http`.
 
 ### Retrieving An Input Value
 
-	$name = $plugin->http->get('name');
+	$name = $http->get('name');
 
 ### Retrieving A Default Value If The Input Value Is Absent
 
-	$name = $plugin->http->get('name', 'Sally');
+	$name = $http->get('name', 'Sally');
 
 ### Determining If An Input Value Is Present
 
-	if ( $plugin->http->has('name') )
+	if ( $http->has('name') )
 	{
 		//
 	}
 
 ### Getting All Input For The Request
 
-	$input = $plugin->http->all();
+	$input = $http->all();
 
-<a name="put-inputs"></a>
-## PUT & DELETE Inputs
+### Setting An Input
 
-Support for `PUT` & `DELETE` is limited to get all methods.
+	$http->set('name', 'Bob');
 
-### Getting All Input For The PUT
+### Forgetting An Input
 
-	$input = $plugin->http->put();
-
-### Getting All Input For The DELETE
-
-	$input = $plugin->http->delete();
+	$http->forget('name');
