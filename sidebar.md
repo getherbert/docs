@@ -1,5 +1,6 @@
 Welcome
 - [Getting Started](/$branch/)
+- [Config](/$branch/config)
 - [Routes](/$branch/routes)
 - [Panels](/$branch/panels)
 - [Enqueue](/$branch/enqueue)
@@ -13,3 +14,4 @@ Welcome
 - [Messages](/$branch/messages)
 - [Widgets](/$branch/widgets)
 - [Saving Data](/$branch/saving-data)
+- [Custom Post Types](/$branch/custom-post-types)
