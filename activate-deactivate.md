@@ -30,7 +30,7 @@ Capsule::schema()->create('orders', function($table)
 
 ### Deactivate
 
-Deactivate actions should be defined in `plugin/deactivate.php`.
+Deactivate actions should be defined in `app/deactivate.php`.
 
 ``` php
 <?php
