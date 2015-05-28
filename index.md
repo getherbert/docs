@@ -78,7 +78,7 @@ We'll update their namespace from `MyPlugin` to `SocialIconsPro` by changing thi
 ``` php
 <?php namespace MyPlugin;
 ```
-To
+Update to:
 
 ``` php
 <?php namespace SocialIconsPro;
@@ -109,7 +109,7 @@ And lastly lets open the config file `herbert.config.php` and change update thre
 ],
 ```
 
-To
+Update to:
 
 ``` php
 /**

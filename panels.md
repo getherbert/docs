@@ -98,12 +98,18 @@ My Plugin
 ├── Configure
 ```
 
-To rename this just supply the Name of the parent and the new Title
+To rename this just set a `rename` attribute when creating your main panel.
+
 
 ``` php
-$panel->renameDefaultSubpanel([
-	'default' => 'mainPanel',
-	'title'   => 'General'
+$panel->add([
+	'type'   => 'panel',
+	'as'     => 'mainPanel',
+	'title'  => 'My Plugin',
+	'rename' => 'General',
+	'slug'   => 'myplugin-index'
+	'icon'   => 'dashicons-media-audio'
+	'uses' => __NAMESPACE__ . '\Controllers\AdminController@index'
 ]);
 ```
 
