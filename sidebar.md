@@ -3,6 +3,7 @@ Welcome
 - [Routes](/$branch/routes)
 - [Panels](/$branch/panels)
 - [Enqueue](/$branch/enqueue)
+- [Helper](/$branch/helper)
 - [Controllers](/$branch/controllers)
 - [Views](/$branch/views)
 - [Inputs](/$branch/inputs)

@@ -63,13 +63,13 @@ We need to tell composer that we've made this change so in your plugin root run 
 
 ```
 app/
-├──	Helper.php
-├──	api.php
-├──	enqueue.php
-├──	panels.php
-├──	routes.php
-├──	shortcodes.php
-├──	widgets.php
+├── Helper.php
+├── api.php
+├── enqueue.php
+├── panels.php
+├── routes.php
+├── shortcodes.php
+├── widgets.php
 ```
 
 
@@ -82,4 +82,54 @@ To
 
 ``` php
 <?php namespace SocialIconsPro;
+```
+
+And lastly lets open the config file `herbert.config.php` and change update three `MyPlugins` to your namesapce.
+
+``` php
+/**
+* The routes to auto-load.
+*/
+'routes' => [
+  'MyPlugin' => __DIR__ . '/app/routes.php'
+],
+
+/**
+* The panels to auto-load.
+*/
+'panels' => [
+  'MyPlugin' => __DIR__ . '/app/panels.php'
+],
+
+/**
+* The APIs to auto-load.
+*/
+'apis' => [
+  'MyPlugin' => __DIR__ . '/app/api.php'
+],
+```
+
+To
+
+``` php
+/**
+* The routes to auto-load.
+*/
+'routes' => [
+  'SocialIconsPro' => __DIR__ . '/app/routes.php'
+],
+
+/**
+* The panels to auto-load.
+*/
+'panels' => [
+  'SocialIconsPro' => __DIR__ . '/app/panels.php'
+],
+
+/**
+* The APIs to auto-load.
+*/
+'apis' => [
+  'SocialIconsPro' => __DIR__ . '/app/api.php'
+],
 ```

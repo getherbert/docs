@@ -10,43 +10,45 @@
 <a name="basic"></a>
 ## Basic
 
-Enqueue is the process of how WordPress loads Scripts and Styles for your plugin. It could be a piece of javascript that is required on an certain admin page or on every post. Enqueue you must supply a Source and Name. The Source is relative to your `plugin/assets` folder.
+Enqueue is the process of how WordPress loads Scripts and Styles for your plugin. It could be a piece of javascript that is required on an certain admin page or on every post. Enqueue you must supply a Source and Name. The Source takes a URL, to use a relative path from `app/assets` folder we wrap with the `Helper::assetUrl()` function.
+
+To read more about the `Helper` class [here](/$branch/hepler)
 
 > **Note:**  Enqueue doesn't work on Routes. You must supply them using standard `link` and `script` tags.
 
 
 #### Enqueue on all front-end pages
 
-	$plugin->enqueue->front([
+	$enqueue->front([
 		'as'  => 'postsJS',
-		'src' => '/js/post.js',
+		'src' => Helper::assetUrl('/js/post.js')
 	]);
 
 
 #### Enqueue on all admin pages
 
-	$plugin->enqueue->admin([
+	$enqueue->admin([
 		'as'  => 'adminCSS',
-		'src' => '/css/admin.css',
+		'src' => Helper::assetUrl('/css/admin.css'),
 	]);
 
 #### Enqueue on all login pages
 
-	$plugin->enqueue->login([
+	$enqueue->login([
 		'as'  => 'loginJS',
-		'src' => '/js/login.js',
+		'src' => Helper::assetUrl('/js/login.js'),
 	]);
 
 #### Setting a source to be included in the footer
 
-	$plugin->enqueue->login([
+	$enqueue->login([
 		'as'  => 'loginJS',
-		'src' => '/js/login.js',
+		'src' => Helper::assetUrl('/js/login.js'),
 	], 'footer');
 
 #### Using a source from http/cdn
 
-	$plugin->enqueue->front([
+	$enqueue->front([
 		'as'  => 'bootstrapCSS',
 		'src' => '//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css',
 	]);
@@ -60,7 +62,7 @@ Its unlikely that you would want to load a source on every panel therefore you c
 
 #### Enqueue on all your panels
 
-	$plugin->enqueue->admin([
+	$enqueue->admin([
 		'as'     => 'someJS',
 		'src'    => '/js/some.js',
 		'filter' => [ 'panel' => '*' ]
@@ -68,7 +70,7 @@ Its unlikely that you would want to load a source on every panel therefore you c
 
 #### Enqueue on one specific panel
 
-	$plugin->enqueue->admin([
+	$enqueue->admin([
 		'as'     => 'someJS',
 		'src'    => '/js/some.js',
 		'filter' => [ 'panel' => 'mainPanel' ]
@@ -76,7 +78,7 @@ Its unlikely that you would want to load a source on every panel therefore you c
 
 #### Enqueue on more than one specific panel
 
-	$plugin->enqueue->admin([
+	$enqueue->admin([
 		'as'     => 'someJS',
 		'src'    => '/js/some.js',
 		'filter' => [ 'panel' => ['mainPanel', 'subPanel'] ]
@@ -91,7 +93,7 @@ Filtering by WordPress standard panels is referred to as Hooks
 
 #### Enqueue on one specific hook
 
-	$plugin->enqueue->admin([
+	$enqueue->admin([
 		'as'     => 'someJS',
 		'src'    => '/js/login.js',
 		'filter' => [ 'hook' => 'edit.php' ]
@@ -99,7 +101,7 @@ Filtering by WordPress standard panels is referred to as Hooks
 
 #### Enqueue on more than one specific hook
 
-	$plugin->enqueue->admin([
+	$enqueue->admin([
 		'as'     => 'someJS',
 		'src'    => '/js/some.js',
 		'filter' => [ 'hook' => ['post-new.php', 'edit.php'] ]
@@ -114,7 +116,7 @@ Filtering by Post, Pages and Categories work the same, they accept IDs, Name or 
 
 #### Enqueue on all pages
 
-	$plugin->enqueue->front([
+	$enqueue->front([
 		'as'     => 'someJS',
 		'src'    => '/js/some.js',
 		'filter' => [ 'page' => '*' ]
@@ -122,7 +124,7 @@ Filtering by Post, Pages and Categories work the same, they accept IDs, Name or 
 
 #### Enqueue on one specific post
 
-	$plugin->enqueue->front([
+	$enqueue->front([
 		'as'     => 'someJS',
 		'src'    => '/js/some.js',
 		'filter' => [ 'post' => '23' ]
@@ -130,7 +132,7 @@ Filtering by Post, Pages and Categories work the same, they accept IDs, Name or 
 
 #### Enqueue on more than one specific category
 
-	$plugin->enqueue->front([
+	$enqueue->front([
 		'as'     => 'someJS',
 		'src'    => '/js/some.js',
 		'filter' => [ 'category' => ['12', '14'] ]
@@ -143,7 +145,7 @@ Filtering by Archive or Search only take the `*` input.
 
 #### Enqueue on any search page
 
-	$plugin->enqueue->front([
+	$enqueue->front([
 		'as'     => 'someJS',
 		'src'    => '/js/some.js',
 		'filter' => [ 'search' => '*' ]
@@ -151,7 +153,7 @@ Filtering by Archive or Search only take the `*` input.
 
 #### Enqueue on any archive page
 
-	$plugin->enqueue->front([
+	$enqueue->front([
 		'as'     => 'someJS',
 		'src'    => '/js/some.js',
 		'filter' => [ 'archive' => '*' ]
@@ -164,7 +166,7 @@ Filtering by Post Type only accepts Slugs
 
 #### Enqueue on one specific post type
 
-	$plugin->enqueue->front([
+	$enqueue->front([
 		'as'     => 'someJS',
 		'src'    => '/js/some.js',
 		'filter' => [ 'postType' => 'movies' ]
@@ -172,7 +174,7 @@ Filtering by Post Type only accepts Slugs
 
 #### Enqueue on more than one specific post type
 
-	$plugin->enqueue->front([
+	$enqueue->front([
 		'as'     => 'someJS',
 		'src'    => '/js/some.js',
 		'filter' => [ 'postType' => ['movies', 'games'] ]
