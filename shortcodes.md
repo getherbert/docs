@@ -9,7 +9,7 @@ Shortcodes are for non-technical users to access some function of your plugin wi
 ``` php
 $shortcode->add(
     'MyPluginShowPostName',
-    '@myPluginApi\showPostName'
+    'myPluginApi::showPostName'
 );
 ```
 
@@ -27,7 +27,7 @@ Unfortunately WordPress doesn't support camel case in shortcode arguments theref
 ``` php
 $shortcode->add(
     'MyPluginShowPostName',
-    '@myPluginApi\showPostName',
+    'myPluginApi::showPostName',
     [
         'post_id' => 'postId'
     ]
