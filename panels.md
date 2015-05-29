@@ -73,6 +73,7 @@ $panel->add([
 	'icon'   => Hepler::assetUrl('/img/icon.png'),
 	'uses' => __NAMESPACE__ . '\Controllers\AdminController@index'
 ]);
+```
 
 <a name="subpanels"></a>
 ## Subpanels
