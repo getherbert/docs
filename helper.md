@@ -9,10 +9,10 @@ You may have noticed the `Helper` class being used on Enqueue and Panels to incl
 Now that `Herbert\Framework` is only loaded once even if there is multiple plugins built on Herbert active. We've had to move path and url logic to each plugin. This is where the `Helper` class comes in. To use `Helper` when your in the root namespace of your app, for example `routes.php`
 
 ```
-Helper:method()
+Helper::method()
 ```
 
-If your not in the root namespace, for example inside a controller. You need to add before calling `Helper:method()`:
+If your not in the root namespace, for example inside a controller. You need to add before calling `Helper::method()`:
 
 ```
 use MyPlugin\Helper;
