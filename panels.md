@@ -62,6 +62,17 @@ $panel->add([
 	'uses' => __NAMESPACE__ . '\Controllers\AdminController@index'
 ]);
 ```
+Below is example using an icon from your asset folder `resources/assets`
+
+``` php
+$panel->add([
+	'type'   => 'panel',
+	'as'     => 'mainPanel',
+	'title'  => 'My Plugin',
+	'slug'   => 'myplugin-index'
+	'icon'   => Hepler::assetUrl('/img/icon.png'),
+	'uses' => __NAMESPACE__ . '\Controllers\AdminController@index'
+]);
 
 <a name="subpanels"></a>
 ## Subpanels
