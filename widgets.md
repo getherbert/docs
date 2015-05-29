@@ -35,4 +35,4 @@ Now, we can register this widget like so:
 
 `app/widgets.php`
 
-$widget->add(__NAMESPACE__ . '\Widgets\MyWidget');
+	$widget->add(__NAMESPACE__ . '\Widgets\MyWidget');
