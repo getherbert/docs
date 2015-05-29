@@ -84,7 +84,7 @@ Update to:
 <?php namespace SocialIconsPro;
 ```
 
-And lastly lets open the config file `herbert.config.php` and change update three `MyPlugins` to your namesapce.
+And lastly lets open the config file `herbert.config.php` and change update four `MyPlugins` to your namespace.
 
 ``` php
 /**
@@ -106,6 +106,17 @@ And lastly lets open the config file `herbert.config.php` and change update thre
 */
 'apis' => [
   'MyPlugin' => __DIR__ . '/app/api.php'
+],
+
+/**
+* The view paths to register.
+*
+* E.G: 'MyPlugin' => __DIR__ . '/views'
+* can be referenced via @MyPlugin/
+* when rendering a view in twig.
+*/
+'views' => [
+	'MyPlugin' => __DIR__ . '/resources/views'
 ],
 ```
 
@@ -132,4 +143,16 @@ Update to:
 'apis' => [
   'SocialIconsPro' => __DIR__ . '/app/api.php'
 ],
+
+/**
+* The view paths to register.
+*
+* E.G: 'MyPlugin' => __DIR__ . '/views'
+* can be referenced via @MyPlugin/
+* when rendering a view in twig.
+*/
+'views' => [
+	'SocialIconsPro' => __DIR__ . '/resources/views'
+],
+
 ```
