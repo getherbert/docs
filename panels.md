@@ -34,7 +34,7 @@ $panel->add([
 	'as'     => 'mainPanel',
 	'title'  => 'My Plugin',
 	'slug'   => 'myplugin-index'
-	'uses' => __NAMESPACE__ . '\Controllers\AdminController@index'
+	'uses'   => __NAMESPACE__ . '\Controllers\AdminController@index'
 ]);
 ```
 
@@ -59,7 +59,7 @@ $panel->add([
 	'title'  => 'My Plugin',
 	'slug'   => 'myplugin-index'
 	'icon'   => 'dashicons-media-audio'
-	'uses' => __NAMESPACE__ . '\Controllers\AdminController@index'
+	'uses'   => __NAMESPACE__ . '\Controllers\AdminController@index'
 ]);
 ```
 Below is example using an icon from your asset folder `resources/assets`
@@ -71,7 +71,7 @@ $panel->add([
 	'title'  => 'My Plugin',
 	'slug'   => 'myplugin-index'
 	'icon'   => Hepler::assetUrl('/img/icon.png'),
-	'uses' => __NAMESPACE__ . '\Controllers\AdminController@index'
+	'uses'   => __NAMESPACE__ . '\Controllers\AdminController@index'
 ]);
 ```
 
@@ -96,7 +96,7 @@ $panel->add([
 	'as'     => 'configure',
 	'title'  => 'Configure',
 	'slug'   => 'myplugin-configure'
-	'uses' => __NAMESPACE__ . '\Controllers\AdminController@configure'
+	'uses'   => __NAMESPACE__ . '\Controllers\AdminController@configure'
 ]);
 ```
 
@@ -121,7 +121,7 @@ $panel->add([
 	'rename' => 'General',
 	'slug'   => 'myplugin-index'
 	'icon'   => 'dashicons-media-audio'
-	'uses' => __NAMESPACE__ . '\Controllers\AdminController@index'
+	'uses'   => __NAMESPACE__ . '\Controllers\AdminController@index'
 ]);
 ```
 
@@ -146,7 +146,7 @@ $panel->add([
 	'as'     => 'dashboardSubpanel',
 	'title'  => 'Your Subpanel',
 	'slug'   => 'myplugin-dashboard'
-	'uses' => __NAMESPACE__ . '\Controllers\AdminController@dashboard'
+	'uses'   => __NAMESPACE__ . '\Controllers\AdminController@dashboard'
 ]);
 ```
 
