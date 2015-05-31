@@ -21,7 +21,11 @@ Download the installer from getcomposer.org/download, execute it and follow the 
 
 ## Installation
 
-Download the latest version of the Herbert framework and extract its contents into a directory on your server. Next, in the root of your plugin, run the php composer.phar install (or composer install) command to install all of the framework's dependencies. This process requires Git to be installed on the server to successfully complete the installation.
+Download the latest version of the Herbert framework and extract its contents into a directory on your server. Next, in the root of your plugin, run.
+
+```
+composer install
+```
 
 ## Working with WordPress
 
