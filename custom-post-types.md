@@ -11,7 +11,7 @@ It's worth reading the [official documentation](https://codex.wordpress.org/Post
 // Register Custom Post Type
 function event_cpt() {
 
-    $labels = array(
+    $labels = [
         'name'                => _x( 'Events', 'Post Type General Name', 'text_domain' ),
         'singular_name'       => _x( 'Event', 'Post Type Singular Name', 'text_domain' ),
         'menu_name'           => __( 'Event', 'text_domain' ),
@@ -27,14 +27,14 @@ function event_cpt() {
         'search_items'        => __( 'Search Events', 'text_domain' ),
         'not_found'           => __( 'Not found', 'text_domain' ),
         'not_found_in_trash'  => __( 'Not found in Trash', 'text_domain' ),
-    );
-    $rewrite = array(
+    ];
+    $rewrite = [
         'slug'                => 'event',
         'with_front'          => true,
         'pages'               => true,
         'feeds'               => true,
-    );
-    $args = array(
+    ];
+    $args = [
         'label'               => __( 'event', 'text_domain' ),
         'description'         => __( 'List of Events', 'text_domain' ),
         'labels'              => $labels,
@@ -53,7 +53,7 @@ function event_cpt() {
         'publicly_queryable'  => true,
         'rewrite'             => $rewrite,
         'capability_type'     => 'page',
-    );
+    ];
     register_post_type( 'event', $args );
 
 }
@@ -97,7 +97,7 @@ app/CustomPostTypes
 
 And lets create a file for People.
 
-`People.php`
+`app/CustomPostTypes/People.php`
 
 ``` php
 <?php namespace MyPlugin\CustomPostTypes;
@@ -105,7 +105,7 @@ And lets create a file for People.
 
 class People {
 
-  public function create()
+  public function register()
   {
     \add_action( 'init', function()
     {
@@ -126,4 +126,25 @@ app/CustomPostTypes/
   People.php
   Books.php
   Events.php
+```
+Then in `app/customPostTypes` you could do
+
+``` php
+<?php
+
+/** @var  \Herbert\Framework\Application $container */
+
+use MyPlugin\CustomPostTypes\People;
+use MyPlugin\CustomPostTypes\Books;
+use MyPlugin\CustomPostTypes\Events;
+
+// Register People CPT
+(new People)->register();
+
+// Register Books CPT
+(new Books)->register();
+
+// Register Events CPT
+(new Events)->register();
+
 ```
