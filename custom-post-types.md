@@ -112,7 +112,7 @@ class People {
       $labels = [...];
       $rewrite = [...];
       $args = [...];
-      \register_post_type('event', $args);
+      \register_post_type('people', $args);
     }
     ,0);
   }
