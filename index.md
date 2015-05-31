@@ -4,10 +4,24 @@
 
 Welcome, Herbert is a plugin framework for WordPress. We believe the current approach to building plugins is unorganised and difficult to understand. It makes working in teams or taking over from a previous developer time consuming. Its early days for Herbert but our aim is to solve this.
 
+## Requirements
+
+Herbert requires [Composer](https://getcomposer.org/). Please make sure it's installed before continuing.  
+
+#### Installing Composer on Linux or Mac OS X
+
+```
+$ curl -sS https://getcomposer.org/installer | php
+$ sudo mv composer.phar /usr/local/bin/composer
+```
+
+#### Installing on Windows
+
+Download the installer from getcomposer.org/download, execute it and follow the instructions.
 
 ## Installation
 
-Once Composer is installed, download the latest version of the Herbert framework and extract its contents into a directory on your server. Next, in the root of your plugin, run the php composer.phar install (or composer install) command to install all of the framework's dependencies. This process requires Git to be installed on the server to successfully complete the installation.
+Download the latest version of the Herbert framework and extract its contents into a directory on your server. Next, in the root of your plugin, run the php composer.phar install (or composer install) command to install all of the framework's dependencies. This process requires Git to be installed on the server to successfully complete the installation.
 
 ## Working with WordPress
 
