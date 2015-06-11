@@ -17,7 +17,7 @@ $panel->add([
 	'type'   => 'panel',
 	'as'     => 'mainPanel',
 	'title'  => 'My Plugin',
-	'slug'   => 'myplugin-index'
+	'slug'   => 'myplugin-index',
 	'uses'   => function()
 	{
 		return 'Hello World';
@@ -33,7 +33,7 @@ $panel->add([
 	'type'   => 'panel',
 	'as'     => 'mainPanel',
 	'title'  => 'My Plugin',
-	'slug'   => 'myplugin-index'
+	'slug'   => 'myplugin-index',
 	'uses'   => __NAMESPACE__ . '\Controllers\AdminController@index'
 ]);
 ```
@@ -57,8 +57,8 @@ $panel->add([
 	'type'   => 'panel',
 	'as'     => 'mainPanel',
 	'title'  => 'My Plugin',
-	'slug'   => 'myplugin-index'
-	'icon'   => 'dashicons-media-audio'
+	'slug'   => 'myplugin-index',
+	'icon'   => 'dashicons-media-audio',
 	'uses'   => __NAMESPACE__ . '\Controllers\AdminController@index'
 ]);
 ```
@@ -69,7 +69,7 @@ $panel->add([
 	'type'   => 'panel',
 	'as'     => 'mainPanel',
 	'title'  => 'My Plugin',
-	'slug'   => 'myplugin-index'
+	'slug'   => 'myplugin-index',
 	'icon'   => Hepler::assetUrl('/img/icon.png'),
 	'uses'   => __NAMESPACE__ . '\Controllers\AdminController@index'
 ]);
@@ -95,7 +95,7 @@ $panel->add([
 	'parent' => 'mainPanel',
 	'as'     => 'configure',
 	'title'  => 'Configure',
-	'slug'   => 'myplugin-configure'
+	'slug'   => 'myplugin-configure',
 	'uses'   => __NAMESPACE__ . '\Controllers\AdminController@configure'
 ]);
 ```
@@ -119,8 +119,8 @@ $panel->add([
 	'as'     => 'mainPanel',
 	'title'  => 'My Plugin',
 	'rename' => 'General',
-	'slug'   => 'myplugin-index'
-	'icon'   => 'dashicons-media-audio'
+	'slug'   => 'myplugin-index',
+	'icon'   => 'dashicons-media-audio',
 	'uses'   => __NAMESPACE__ . '\Controllers\AdminController@index'
 ]);
 ```
@@ -145,7 +145,7 @@ $panel->add([
 	'parent' => 'index.php',
 	'as'     => 'dashboardSubpanel',
 	'title'  => 'Your Subpanel',
-	'slug'   => 'myplugin-dashboard'
+	'slug'   => 'myplugin-dashboard',
 	'uses'   => __NAMESPACE__ . '\Controllers\AdminController@dashboard'
 ]);
 ```
