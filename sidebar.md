@@ -1,5 +1,5 @@
 Welcome
-- [Getting Started](/$branch/)
+- [Getting Started](/$branch)
 - [Config](/$branch/config)
 - [Routes](/$branch/routes)
 - [Panels](/$branch/panels)
