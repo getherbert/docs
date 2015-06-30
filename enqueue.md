@@ -10,7 +10,7 @@
 <a name="basic"></a>
 ## Basic
 
-Enqueue is the process of how WordPress loads Scripts and Styles for your plugin. It could be a piece of javascript that is required on an certain admin page or on every post. Enqueue you must supply a Source and Name. The Source takes a URL, to use a relative path from `app/assets` folder we wrap with the `Helper::assetUrl()` function.
+Enqueue is the process of how WordPress loads Scripts and Styles for your plugin. It could be a piece of javascript that is required on an certain admin page or on every post. Enqueue you must supply a Source and Name. The Source takes a URL, to use a relative path from `resources/assets` folder we wrap with the `Helper::assetUrl()` function.
 
 To read more about the `Helper` class [here](/$branch/hepler)
 
