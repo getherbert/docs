@@ -1,18 +1,18 @@
 # Helper
 
-You may have noticed the `Helper` class being used on Enqueue and Panels to include assets from your plugin. At first the this may see a little weird compared to older versions of Herbert where you could do both:
+You may have noticed the `Helper` class being used on Enqueue and Panels to include assets from your plugin. At first this may see a little weird compared to older versions of Herbert where you could do both:
 
 ```
 'src' => '/js/post.js'
 'src' => '//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css'
 ```
-Now that `Herbert\Framework` is only loaded once even if there is multiple plugins built on Herbert active. We've had to move path and url logic to each plugin. This is where the `Helper` class comes in. To use `Helper` when your in the root namespace of your app, for example `routes.php`
+Now that `Herbert\Framework` is only loaded once even if there are multiple plugins built on Herbert active, we've had to move path and url logic to each plugin. This is where the `Helper` class comes in. The following is an example (seen in `routes.php`) use of `Helper` while in the root namespace of an app:
 
 ```
 Helper::method()
 ```
 
-If your not in the root namespace (inside a controller for example), you'll need to add this before calling `Helper::method()`:
+If your not in the root namespace (for example, inside a controller), you need to add the following before calling `Helper::method()`:
 
 ```
 use MyPlugin\Helper;

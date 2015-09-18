@@ -2,7 +2,7 @@
 
 > **Note:**  First pass of the docs completed.
 
-Welcome, Herbert is a plugin framework for WordPress. We believe the current approach to building plugins is unorganised and difficult to understand. It makes working in teams or taking over from a previous developer time consuming. Its early days for Herbert but our aim is to solve this.
+Welcome, Herbert is a plugin framework for WordPress. We believe the current approach to building plugins is unorganised and difficult to understand. It makes working in teams or taking over from a previous developer time consuming. It's early days for Herbert but our aim is to solve this.
 
 ## Requirements
 
@@ -21,7 +21,7 @@ Download the installer from getcomposer.org/download, execute it and follow the 
 
 ## Installation
 
-Download the latest version of the Herbert framework and extract its contents into a directory on your server. Next, in the root of your plugin, run.
+Download the latest version of the Herbert framework and extract its contents into a directory on your server. Next, in the root of your plugin, run:
 
 ```
 composer install
@@ -59,7 +59,7 @@ Open the `plugin.php` and you will see a comment at the top where you set severa
 
 ## Namespacing your Plugin
 
-To avoid conflicts with other plugins or the WordPress core its important to set a [namespace](http://php.net/manual/en/language.namespaces.php). To get started lets open up `composer.json` and find the `autoload` section. As standard it looks like:
+To avoid conflicts with other plugins or the WordPress core its important to set a [namespace](http://php.net/manual/en/language.namespaces.php). To get started let's open up `composer.json` and find the `autoload` section. As standard it looks like:
 
 ``` javascript
 "autoload": {
@@ -68,7 +68,7 @@ To avoid conflicts with other plugins or the WordPress core its important to set
     }
   }
 ```
-Now let's update `MyPlugin` with your namespace. Generally your plugin name without spaces, for example: Our plugin called `Social Icons (pro)` would become `SocialIconsPro`. Now the autoload section would look like:
+Now let's update `MyPlugin` with your namespace. Generally you'll want to use your plugin name without spaces. For example: Our plugin called `Social Icons (pro)` would become `SocialIconsPro`. Now the autoload section would look like:
 
 ``` javascript
 "autoload": {
@@ -77,7 +77,7 @@ Now let's update `MyPlugin` with your namespace. Generally your plugin name with
     }
   }
 ```
-We need to tell composer that we've made this change so in your plugin root run `composer dump-autoload`. Now at the top of each of the following files:
+We need to tell composer that we've made this change. In your plugin root run `composer dump-autoload`. Now at the top of each of the following files:
 
 ```
 app/
@@ -102,7 +102,7 @@ Update to:
 <?php namespace SocialIconsPro;
 ```
 
-And lastly lets open the config file `herbert.config.php` and change update four `MyPlugins` to your namespace.
+And lastly let's open the config file `herbert.config.php` and update four `MyPlugins` to your namespace.
 
 ``` php
 /**

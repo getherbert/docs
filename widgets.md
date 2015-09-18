@@ -1,6 +1,6 @@
 # Widgets
 
-Widget are typically stored in the `app/Widgets` directory. Once ready to register them with WordPress you can do so in `app/widgets.php`.
+Widgets are typically stored in the `app/Widgets` directory. Once you're ready to register a widget with WordPress you can do so in `app/widgets.php`.
 
 When defining a widget it must extend the `WP_Widget` class. Here is an example of a basic widget class:
 

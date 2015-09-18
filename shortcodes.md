@@ -1,6 +1,6 @@
 # Shortcodes
 
-Shortcodes are for non-technical users to access some function of your plugin within the WordPress content editor. Therefore adding a shortcode is generally just a reference to API method. Shortcodes consist of a Name, API Call and Argument Name Array (more on this later) and are defined in `app/shortcodes.php`
+Shortcodes are for non-technical users to access some function of your plugin within the WordPress content editor. Therefore, adding a shortcode is generally just a reference to an API method. Shortcodes consist of a Name, API Call and Argument Name Array (more on this later). They are defined in `app/shortcodes.php`.
 
 ### Adding a Basic Shortcode
 
@@ -21,7 +21,7 @@ This would then be accessed by the shortcode like so:
 
 ### Handling Argument Names
 
-Unfortunately WordPress doesn't support camel case in shortcode arguments therefore you can supply an array to rename them.
+Unfortunately WordPress doesn't support camel case in shortcode arguments; You'll need to supply an array to rename them.
 
 
 ``` php
@@ -50,7 +50,7 @@ $api->add('showPostName', function($postId)
 
 ### Using any controller method or closure
 
-In some cases you may need to call normal controller method or do some setup before hand in a closure.
+In some cases you may need to a call normal controller method or do some setup before hand in a closure.
 
 ``` php
 $shortcode->add(

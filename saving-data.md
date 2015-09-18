@@ -1,6 +1,6 @@
 # Saving Data
 
-Herbert pulls in Laravels Eloquent ORM but not all plugins will need this so if you plan to save very little information then you will want to look into [WordPress Options Mechanism](http://codex.wordpress.org/Writing_a_Plugin#Saving_Plugin_Data_to_the_Database).
+Herbert pulls in Laravel's Eloquent ORM. However, not all plugins will need this. If you plan to save very little information you will want to look into [WordPress Options Mechanism](http://codex.wordpress.org/Writing_a_Plugin#Saving_Plugin_Data_to_the_Database).
 
 ## Eloquent ORM
 

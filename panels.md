@@ -78,7 +78,7 @@ $panel->add([
 <a name="subpanels"></a>
 ## Subpanels
 
-If you require more than one panel for your plugin you may decided to add them as subpanel:
+If you require more than one panel for your plugin you may decided to add them as a subpanel:
 
 ```
 My Plugin
@@ -102,7 +102,7 @@ $panel->add([
 
 #### Renaming the Root Subpanel
 
-You will notice if you add the first subpanel that WordPress will automatically insert a subpanel named the same as parent:
+You will notice in adding the first subpanel that WordPress will automatically insert a subpanel with the same name as the parent:
 
 ```
 My Plugin
@@ -110,7 +110,7 @@ My Plugin
 ├── Configure
 ```
 
-To rename this just set a `rename` attribute when creating your main panel.
+To rename this simply set a `rename` attribute when creating your main panel.
 
 
 ``` php
@@ -150,7 +150,7 @@ $panel->add([
 ]);
 ```
 
-There is 12 different types of WordPress panels which you can supply as a Parent Name:
+There are 12 different types of WordPress panels which you can supply as a Parent Name:
 
 ```
 Dashboard: 'index.php'
