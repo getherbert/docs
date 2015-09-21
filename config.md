@@ -20,7 +20,7 @@ If either PluginOne or PluginTwo have constraint higher than 0.9 the user will b
 <a name="extend"></a>
 ## Extend
 
-You can add your own variables to the Config file and easily retrieve them later. Open up the `herbert.config.php` and two new variables.
+You can add your own variables to the Config file and easily retrieve them later. Open up the `herbert.config.php` and add two new variables.
 
 ``` php
 return [
