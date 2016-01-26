@@ -35,7 +35,7 @@ $router->get([
     'uses' => __NAMESPACE__ . '\Controllers\PostController@showPost'
 ]);
 ```
-Below is a more advanced example demonstrating how you could include the `Http` component of framework. On top of that we show you how to return different http status (in this case 404) as well as a json repsonse.
+Below is a more advanced example demonstrating how you could include the `Http` component of the framework. On top of that we show you how to return different http statuses (in this case 404) as well as a json response.
 
 ``` php
 <?php namespace MyPlugin\Controllers;
