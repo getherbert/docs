@@ -7,7 +7,7 @@
 <a name="main-panels"></a>
 ## Main Panels
 
-Panels (or menus) for your plugin will be defined in the `app/panels.php` file. Herbert panels refer to an option in left sidebar of WordPress admin area. They consist of a Type, Name, Title, Slug and a Closure callback. The Slug will be appended to the site admin url, for example: `http://example.com/wp-admin/admin.php?page=myplugin-index`
+Panels (or menus) for your plugin will be defined in the `app/panels.php` file. Herbert panels refer to an option in left sidebar of WordPress admin area. They consist of a Type, Name, Title, Slug, Order, and a Closure callback. The Slug will be appended to the site admin url, for example: `http://example.com/wp-admin/admin.php?page=myplugin-index`. The `order` parameter relates to the position of the menu item in the dashboard sidebar.
 
 
 #### Main Panel using Closure
@@ -18,6 +18,7 @@ $panel->add([
 	'as'     => 'mainPanel',
 	'title'  => 'My Plugin',
 	'slug'   => 'myplugin-index',
+	'order'  => '35.555',
 	'uses'   => function()
 	{
 		return 'Hello World';
@@ -34,6 +35,7 @@ $panel->add([
 	'as'     => 'mainPanel',
 	'title'  => 'My Plugin',
 	'slug'   => 'myplugin-index',
+	'order'  => '35.555',
 	'uses'   => __NAMESPACE__ . '\Controllers\AdminController@index'
 ]);
 ```
