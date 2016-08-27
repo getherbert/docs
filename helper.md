@@ -12,7 +12,7 @@ Now that `Herbert\Framework` is only loaded once even if there are multiple plug
 Helper::method()
 ```
 
-If your not in the root namespace (for example, inside a controller), you need to add the following before calling `Helper::method()`:
+If you're not in the root namespace (for example, inside a controller), you need to add the following before calling `Helper::method()`:
 
 ```
 use MyPlugin\Helper;
