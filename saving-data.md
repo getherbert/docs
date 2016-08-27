@@ -4,7 +4,7 @@ Herbert pulls in Laravel's Eloquent ORM. However, not all plugins will need this
 
 ## Eloquent ORM
 
-We recommend reading the docs on [Eloquent](http://laravel.com/docs/4.2/eloquent) & [Schema](http://laravel.com/docs/4.2/schema). Below is quick overview.
+We recommend reading the docs on [Eloquent](http://laravel.com/docs/5.0/eloquent) & [Schema](http://laravel.com/docs/5.0/schema). Below is quick overview.
 
 
 ### Creating a Table
