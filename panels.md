@@ -72,7 +72,7 @@ $panel->add([
 	'as'     => 'mainPanel',
 	'title'  => 'My Plugin',
 	'slug'   => 'myplugin-index',
-	'icon'   => Hepler::assetUrl('/img/icon.png'),
+	'icon'   => Helper::assetUrl('/img/icon.png'),
 	'uses'   => __NAMESPACE__ . '\Controllers\AdminController@index'
 ]);
 ```
